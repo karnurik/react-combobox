@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders successfully 1`] = `
+<div
+  className="combo-list-item"
+  id="1"
+>
+  <input
+    checked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="combo-list-text"
+  >
+    Candy Eat
+  </span>
+</div>
+`;

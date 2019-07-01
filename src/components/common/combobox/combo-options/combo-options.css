@@ -1,0 +1,9 @@
+.combo-list-item {
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+}
+.combo-list-text {
+  margin-left: 15px;
+  color: #000000;
+  font-size: 12px;
+}

@@ -1,0 +1,14 @@
+.combo-list-container {
+  position: relative;
+}
+.combo-list {
+  width: 100%;
+  border: 1px solid lightgray;
+  position: absolute;
+  top: 48px;
+  z-index: 1111;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: scroll;
+  background: #ffffff;
+}

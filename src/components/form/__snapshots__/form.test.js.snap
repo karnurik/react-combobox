@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders successfully 1`] = `
+<form
+  className="form"
+>
+  <label>
+    Username
+  </label>
+  <input
+    name="username"
+    onChange={[Function]}
+    placeholder="Username"
+    type="text"
+    value=""
+  />
+  <div
+    className="combo-box"
+  >
+    <label>
+      Games
+    </label>
+    <input
+      className="form-input"
+      defaultValue=""
+      onFocus={[Function]}
+      placeholder="Select Games"
+      type="text"
+    />
+  </div>
+  <input
+    type="submit"
+    value="Submit"
+  />
+</form>
+`;

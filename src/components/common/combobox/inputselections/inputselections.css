@@ -1,0 +1,21 @@
+.down-arrow {
+  margin-left: 10px;
+  border: solid gray;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/*.input-placeholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+
+/*.input-placeholder-container {
+  border: 1px solid #d2d2d2;
+  padding: 10px;
+  border-radius: 5px;
+}*/
