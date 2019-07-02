@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ComboInput from './combo-input/ComboInput';
-import InputSelections from './input-selections/InputSelections';
+import ComboInput from './comboInput/ComboInput';
+import InputSelections from './inputSelections/InputSelections';
 
 class Combobox extends Component {
     constructor(props) {

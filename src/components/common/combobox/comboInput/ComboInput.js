@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ComboOptions from '../combo-options/ComboOptions';
+import ComboOptions from '../comboOptions/ComboOptions';
 import './comboInput.css';
 
 class ComboInput extends Component {
