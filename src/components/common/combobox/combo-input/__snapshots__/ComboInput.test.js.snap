@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders successfully 1`] = `
+<div
+  className="combo-list-container"
+>
+  <input
+    autoComplete="off"
+    autoFocus={true}
+    className="form-input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value=""
+  />
+  <div
+    className="combo-list"
+  >
+    <div
+      className="combo-list-item"
+      id="1"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="combo-list-text"
+      >
+        Candy Eat
+      </span>
+    </div>
+    <div
+      className="combo-list-item"
+      id="2"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="combo-list-text"
+      >
+        Onions Pick
+      </span>
+    </div>
+    <div
+      className="combo-list-item"
+      id="3"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="combo-list-text"
+      >
+        Fanny Pick
+      </span>
+    </div>
+    <div
+      className="combo-list-item"
+      id="4"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="combo-list-text"
+      >
+        Click o Wisp
+      </span>
+    </div>
+  </div>
+</div>
+`;

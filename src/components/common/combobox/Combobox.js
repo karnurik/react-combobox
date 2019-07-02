@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ComboInput from './combo-input/ComboInput';
-import InputSelections from './inputselections/InputSelections';
+import InputSelections from './input-selections/InputSelections';
 
 class Combobox extends Component {
     constructor(props) {
@@ -59,7 +59,7 @@ class Combobox extends Component {
         
         (selectedOptions && selectedOptions.includes(selectedId)) ? 
             selectedOptions.splice(selectedOptions.indexOf(selectedId) , 1)
-        :
+            :
             selectedOptions.push(selectedId);
         
 
@@ -79,7 +79,14 @@ class Combobox extends Component {
         const selectedOptions = this.state.selectedOptions ? this.state.selectedOptions : [];
         const data            = this.props.data ? this.props.data : [];
         const label           = this.props.label ? this.props.label : '';
-
+        
+        /**
+         * code to check the exception handling pass value debug to label 
+         */
+        if(label == 'debug'){
+            throw new Error('I crashed!');
+        }
+        
         return (
             <div className='combo-box' ref={this.setWrapperRef} >
                  <label>{label}</label>

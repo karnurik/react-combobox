@@ -11,6 +11,7 @@ exports[`Component renders successfully 1`] = `
     name="username"
     onChange={[Function]}
     placeholder="Username"
+    required={true}
     type="text"
     value=""
   />
@@ -29,6 +30,7 @@ exports[`Component renders successfully 1`] = `
     />
   </div>
   <input
+    disabled={true}
     type="submit"
     value="Submit"
   />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Combobox from '../common/combobox/Combobox'
+import ComboBoxInput from '../common/combobox'
 import './form.css';
 
 class Form extends Component {
@@ -25,16 +25,16 @@ class Form extends Component {
             <>
                 <form  className="form">
                     <label>Username</label>
-                    <input type="text" name="username" placeholder="Username" value={this.state.userName} onChange={this.handleInputChange} />
+                    <input type="text" name="username" placeholder="Username" value={this.state.userName} onChange={this.handleInputChange} required />
 
-                    <Combobox
+                    <ComboBoxInput
                         data={this.state.options}
                         placeholder='Select Games'
                         searchPlaceholder='Search Games'
                         label='Games'
                         />
                 
-                    <input type="submit" value="Submit" />
+                    <input type="submit" disabled value="Submit" />
                 </form>
             </>
         );
