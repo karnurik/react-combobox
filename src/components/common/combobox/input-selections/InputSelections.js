@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './inputselections.css';
+import './inputSelections.css';
 
 class InputSelections extends Component {
     constructor(props) {

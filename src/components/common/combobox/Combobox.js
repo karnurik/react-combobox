@@ -83,7 +83,7 @@ class Combobox extends Component {
         /**
          * code to check the exception handling pass value debug to label 
          */
-        if(label == 'debug'){
+        if(label === 'debug'){
             throw new Error('I crashed!');
         }
         
