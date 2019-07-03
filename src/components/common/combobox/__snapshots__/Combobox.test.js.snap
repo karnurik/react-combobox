@@ -2,17 +2,21 @@
 
 exports[`Combobox component renders correctly 1`] = `
 <div
-  className="combo-box"
+  id="outer"
 >
-  <label>
-    Games
-  </label>
-  <input
-    className="form-input"
-    defaultValue=""
-    onFocus={[Function]}
-    placeholder="Select Games"
-    type="text"
-  />
+  <div
+    className="combo-box"
+  >
+    <label>
+      Games
+    </label>
+    <input
+      className="form-input"
+      defaultValue=""
+      onFocus={[Function]}
+      placeholder="Select Games"
+      type="text"
+    />
+  </div>
 </div>
 `;

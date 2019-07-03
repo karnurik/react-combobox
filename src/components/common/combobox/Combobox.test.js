@@ -1,6 +1,7 @@
 import React from 'react';
 import Combobox from './combobox';
 import renderer from 'react-test-renderer';
+import {shallow} from 'enzyme';
 
 const data = [
   { id: '1', name: 'Candy Eat' },
@@ -23,6 +24,15 @@ test('Combobox component renders correctly', () => {
   );
 
   expect(component.toJSON()).toMatchSnapshot();
+});
+
+describe('Combobox suite', () => {
+
+  it('handles outside clicks, check handleClickOutside function', () => {
+    const wrapper = shallow(<Combobox />);
+    wrapper.find('#outer').simulate('click');
+    expect(wrapper.state().searching).toEqual(false)
+  })
 });
 
 

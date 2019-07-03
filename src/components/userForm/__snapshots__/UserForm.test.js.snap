@@ -16,18 +16,22 @@ exports[`Component renders successfully 1`] = `
     value=""
   />
   <div
-    className="combo-box"
+    id="outer"
   >
-    <label>
-      Games
-    </label>
-    <input
-      className="form-input"
-      defaultValue="Candy Eat, Onions Pick"
-      onFocus={[Function]}
-      placeholder="Select Games"
-      type="text"
-    />
+    <div
+      className="combo-box"
+    >
+      <label>
+        Games
+      </label>
+      <input
+        className="form-input"
+        defaultValue="Candy Eat, Onions Pick"
+        onFocus={[Function]}
+        placeholder="Select Games"
+        type="text"
+      />
+    </div>
   </div>
   <input
     disabled={true}

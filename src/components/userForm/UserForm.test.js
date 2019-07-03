@@ -1,7 +1,7 @@
 import React from 'react';
 import UserForm from './userForm';
 import renderer from 'react-test-renderer';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 
 
 const options =  [
@@ -27,7 +27,7 @@ test('Component renders successfully', () => {
 describe('Form suite', () => {
 
   it('handles input change', () => {
-    const wrapper = mount(<UserForm />);
+    const wrapper = shallow(<UserForm />);
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } });
     expect(wrapper.state().userName).toEqual('Hello')
   })

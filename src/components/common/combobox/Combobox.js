@@ -65,8 +65,8 @@ class Combobox extends Component {
             selectedOptions.push(selectedId);
         
 
-        this.setState({selectedOptions: selectedOptions}, _ => 
-            this.props.optionOnchange(selectedId, selectedOptions)
+        this.setState({selectedOptions: selectedOptions}, 
+            _ => this.props.optionOnchange(selectedId, selectedOptions)
         );
         
     }
@@ -87,6 +87,7 @@ class Combobox extends Component {
         
         return (
             <ComboboxErrorBoundry>
+                <div id='outer'>
                 <div className='combo-box' ref={this.setWrapperRef} >
                     <label>{label}</label>
                     {this.state.searching ? 
@@ -101,6 +102,7 @@ class Combobox extends Component {
                             placeholder= {this.props.placeholder}
                             handleInputChange = {this.props.handleInputChange}
                         /> }
+                </div>
                 </div>
             </ComboboxErrorBoundry>
         );
