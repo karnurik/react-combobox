@@ -24,3 +24,5 @@ test('Combobox component renders correctly', () => {
 
   expect(component.toJSON()).toMatchSnapshot();
 });
+
+

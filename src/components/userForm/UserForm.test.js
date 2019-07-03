@@ -1,7 +1,7 @@
 import React from 'react';
 import UserForm from './userForm';
 import renderer from 'react-test-renderer';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 
 const options =  [
@@ -24,11 +24,11 @@ test('Component renders successfully', () => {
   expect(component.toJSON()).toMatchSnapshot();
 });
 
-// describe('Form suite', () => {
+describe('Form suite', () => {
 
-//   it('renders without crash', () => {
-//     const wrapper = shallow(<UserForm />);
-//     wrapper.find('input').first().simulate('change');
-//     expect(wrapper.state().username).toEqual('')
-//   })
-// });
+  it('handles input change', () => {
+    const wrapper = mount(<UserForm />);
+    wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } });
+    expect(wrapper.state().userName).toEqual('Hello')
+  })
+});

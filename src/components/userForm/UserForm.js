@@ -22,8 +22,7 @@ class UserForm extends Component {
       * @return na
     */ 
     handleInputChange = e => {
-        const {name, value} = e.target;
-        this.setState({[name]: value});
+        this.setState({userName: e.target.value});
     }
 
     /* 
