@@ -23,7 +23,7 @@ exports[`Component renders successfully 1`] = `
     </label>
     <input
       className="form-input"
-      defaultValue=""
+      defaultValue="Candy Eat, Onions Pick"
       onFocus={[Function]}
       placeholder="Select Games"
       type="text"

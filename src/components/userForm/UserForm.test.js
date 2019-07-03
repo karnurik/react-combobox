@@ -1,6 +1,7 @@
 import React from 'react';
-import Form from './form';
+import UserForm from './userForm';
 import renderer from 'react-test-renderer';
+import {shallow} from 'enzyme';
 
 
 const options =  [
@@ -14,7 +15,7 @@ const userName = 'UjjwalKumar';
 
 test('Component renders successfully', () => {
   const component = renderer.create(
-    <Form
+    <UserForm
       options={options}
       userName={userName}
     />
@@ -22,3 +23,12 @@ test('Component renders successfully', () => {
   
   expect(component.toJSON()).toMatchSnapshot();
 });
+
+// describe('Form suite', () => {
+
+//   it('renders without crash', () => {
+//     const wrapper = shallow(<UserForm />);
+//     wrapper.find('input').first().simulate('change');
+//     expect(wrapper.state().username).toEqual('')
+//   })
+// });

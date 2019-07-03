@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+
 import ComboInput from './comboInput/ComboInput';
 import InputSelections from './inputSelections/InputSelections';
+import ComboboxErrorBoundry from './ComboboxErrorBoundry';
 
 class Combobox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          selectedOptions : [],
+          selectedOptions : props.selectedOptions ? props.selectedOptions : [],
           searching       : false
         }
     }
@@ -63,7 +65,10 @@ class Combobox extends Component {
             selectedOptions.push(selectedId);
         
 
-        this.setState({selectedOptions: selectedOptions});
+        this.setState({selectedOptions: selectedOptions}, _ => 
+            this.props.optionOnchange(selectedId, selectedOptions)
+        );
+        
     }
 
     /* 
@@ -80,28 +85,24 @@ class Combobox extends Component {
         const data            = this.props.data ? this.props.data : [];
         const label           = this.props.label ? this.props.label : '';
         
-        /**
-         * code to check the exception handling pass value debug to label 
-         */
-        if(label === 'debug'){
-            throw new Error('I crashed!');
-        }
-        
         return (
-            <div className='combo-box' ref={this.setWrapperRef} >
-                 <label>{label}</label>
-                 {this.state.searching ? 
-                    <ComboInput data={data} 
-                        selectedOptions={selectedOptions} 
-                        handleSelectedOptions={this.handleSelectedOptions} 
-                        searchPlaceholder={this.props.searchPlaceholder}
-                    /> : 
-                    <InputSelections data={data} 
-                        selectedOptions={selectedOptions} 
-                        handleInputFocus={this.handleInputFocus}
-                        placeholder= {this.props.placeholder}
-                    /> }
-            </div>
+            <ComboboxErrorBoundry>
+                <div className='combo-box' ref={this.setWrapperRef} >
+                    <label>{label}</label>
+                    {this.state.searching ? 
+                        <ComboInput data={data} 
+                            selectedOptions={selectedOptions} 
+                            handleSelectedOptions={this.handleSelectedOptions} 
+                            searchPlaceholder={this.props.searchPlaceholder}
+                        /> : 
+                        <InputSelections data={data} 
+                            selectedOptions={selectedOptions} 
+                            handleInputFocus={this.handleInputFocus}
+                            placeholder= {this.props.placeholder}
+                            handleInputChange = {this.props.handleInputChange}
+                        /> }
+                </div>
+            </ComboboxErrorBoundry>
         );
     }
 }
