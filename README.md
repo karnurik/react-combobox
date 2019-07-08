@@ -2,13 +2,13 @@ This project was bootstrapped with [Create React App]
 
 ## ComboBox form control usage example
 
-Pass following props 
-placeholder 
-searchPlaceholder
-label (label of the combobox)
-selectedOptions (pas array of ids if you want pre selected options)
-optionOnchange (onchange event returns current changed options id and all selected options id)
-data (an array of objects with id and name keys)
+Pass following props : <br>
+placeholder <br>
+searchPlaceholder <br>
+label (label of the combobox) <br>
+selectedOptions (pas array of ids if you want pre selected options) <br>
+optionOnchange (onchange event returns current changed options id and all selected options id) <br>
+data (an array of objects with id and name keys) <br>
 ``` eg: [
         { id: '1', name: 'Candy Eat' },
         { id: '2', name: 'Onions Pick' },
@@ -99,5 +99,5 @@ react-combobox/
 
 ## Naming convention
 
-### CamelCase ( upper CamelCase) - for component files and their respective test cases
-### Mixed Case (lower CamelCase) - for folders and  resource files like css. 
+###### CamelCase ( upper CamelCase) - for component files and their respective test cases
+###### Mixed Case (lower CamelCase) - for folders and  resource files like css. 
