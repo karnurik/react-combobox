@@ -1,7 +1,7 @@
 import React from 'react';
 import Combobox from './combobox';
 import renderer from 'react-test-renderer';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 const data = [
   { id: '1', name: 'Candy Eat' },
@@ -32,7 +32,14 @@ describe('Combobox suite', () => {
     const wrapper = shallow(<Combobox />);
     wrapper.find('#outer').simulate('click');
     expect(wrapper.state().searching).toEqual(false)
-  })
+  });
+
+  it('check handleInputFocus function', () => {
+    const wrapper = mount(<Combobox />);
+    wrapper.find('.form-input').simulate('focus');
+    expect(wrapper.state().searching).toEqual(true);
+  });
+
 });
 
 

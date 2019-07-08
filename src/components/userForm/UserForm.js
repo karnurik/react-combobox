@@ -32,7 +32,7 @@ class UserForm extends Component {
     */ 
     optionOnchange = (optionId, selectedOptions) => {
         //use these to get currently selected option and current clicked (checked or unchecked) option's id
-        console.log('option changed, changed OptionId: ', optionId, selectedOptions)
+        //console.log('option changed, changed OptionId: ', optionId, selectedOptions)
     }
 
     render() {

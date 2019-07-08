@@ -1,7 +1,7 @@
 import React from 'react';
 import InputSelections from './InputSelections';
 import renderer from 'react-test-renderer';
-
+import {shallow} from 'enzyme';
 
 const data = [
   { id: '1', name: 'Candy Eat' },
@@ -23,3 +23,12 @@ test('Component renders successfully', () => {
   );
   expect(component.toJSON()).toMatchSnapshot();
 });
+
+// describe('InputSelection suite', () => {
+
+//   it('handles outside clicks, check handleClickOutside function', () => {
+//     const wrapper = shallow(<InputSelections />);
+//     wrapper.find('#outer').simulate('click');
+//     expect(wrapper.state().searching).toEqual(false)
+//   })
+// });
