@@ -36,7 +36,7 @@ describe('Combobox suite', () => {
 
   it('check handleInputFocus function', () => {
     const wrapper = mount(<Combobox />);
-    wrapper.find('.form-input').simulate('focus');
+    wrapper.find('.drop-down').simulate('click');
     expect(wrapper.state().searching).toEqual(true);
   });
 

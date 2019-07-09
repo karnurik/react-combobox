@@ -87,22 +87,22 @@ class Combobox extends Component {
         
         return (
             <ComboboxErrorBoundry>
-                <div id='outer'>
-                <div className='combo-box' ref={this.setWrapperRef} >
-                    <label>{label}</label>
-                    {this.state.searching ? 
-                        <ComboInput data={data} 
-                            selectedOptions={selectedOptions} 
-                            handleSelectedOptions={this.handleSelectedOptions} 
-                            searchPlaceholder={this.props.searchPlaceholder}
-                        /> : 
-                        <InputSelections data={data} 
-                            selectedOptions={selectedOptions} 
-                            handleInputFocus={this.handleInputFocus}
-                            placeholder= {this.props.placeholder}
-                            handleInputChange = {this.props.handleInputChange}
-                        /> }
-                </div>
+                <div id='outer'> {/* this div is for unit testing purpose only */}
+                    <div className='combo-box' ref={this.setWrapperRef} >
+                        <label>{label}</label>
+                        {this.state.searching ? 
+                            <ComboInput data={data} 
+                                selectedOptions={selectedOptions} 
+                                handleSelectedOptions={this.handleSelectedOptions} 
+                                searchPlaceholder={this.props.searchPlaceholder}
+                            /> : 
+                            <InputSelections data={data} 
+                                selectedOptions={selectedOptions} 
+                                handleInputFocus={this.handleInputFocus}
+                                placeholder= {this.props.placeholder}
+                                handleInputChange = {this.props.handleInputChange}
+                            /> }
+                    </div>
                 </div>
             </ComboboxErrorBoundry>
         );

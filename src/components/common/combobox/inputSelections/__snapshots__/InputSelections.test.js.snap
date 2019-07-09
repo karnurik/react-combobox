@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component renders successfully 1`] = `
-<input
-  className="form-input"
-  defaultValue=""
-  placeholder="Select Games"
-  type="text"
-/>
+<div
+  className="drop-down"
+>
+  <input
+    className="form-input"
+    defaultValue=""
+    placeholder="Select Games"
+    type="text"
+  />
+  <i
+    className="down-arrow"
+  />
+</div>
 `;

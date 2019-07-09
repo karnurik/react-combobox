@@ -16,6 +16,7 @@ class InputSelections extends Component {
       * @return na
     */
     componentDidMount () {
+       // this.refs.arrowRef.innerHTML = "&#9660;";
        const slectedElements = [];
        this.props.data.forEach(elem => {
            if(this.props.selectedOptions && this.props.selectedOptions.includes(elem.id)){
@@ -29,15 +30,15 @@ class InputSelections extends Component {
         const placeholder = this.props.placeholder ? this.props.placeholder : 'Select' ;
         
         return (
-            <>
+            <div className="drop-down"  onClick={this.props.handleInputFocus}>
                 <input
                     type='text'
                     className='form-input'
                     placeholder={placeholder}
                     defaultValue= {this.state.slectedElements.join(', ')}
-                    onFocus={this.props.handleInputFocus}
                     />
-            </>
+                    <i className='down-arrow' />
+            </div>
         );
     }
 }

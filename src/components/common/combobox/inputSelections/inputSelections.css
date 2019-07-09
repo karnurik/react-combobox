@@ -1,9 +1,15 @@
 .down-arrow {
-  margin-left: 10px;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  padding: 4px;
   border: solid gray;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.drop-down{
+  position: relative;
 }

@@ -9,7 +9,8 @@ label (label of the combobox) <br>
 selectedOptions (pas array of ids if you want pre selected options) <br>
 optionOnchange (onchange event returns current changed options id and all selected options id) <br>
 data (an array of objects with id and name keys) <br>
-``` eg: [
+``` 
+eg: [
         { id: '1', name: 'Candy Eat' },
         { id: '2', name: 'Onions Pick' },
         { id: '3', name: 'Fanny Pick' },
